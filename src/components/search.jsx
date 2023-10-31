@@ -2,6 +2,7 @@ import React, { useState} from 'react'
 
 export default function Search() {
   
+  // sample dataset
   const cities = [
     {name: 'Calgary', province: 'Alberta'},
     {name: 'Airdie', province: 'Alberta'},
@@ -12,12 +13,14 @@ export default function Search() {
   ];
 
   const [searchCity, setSearchCity] = useState('');
-
+  
+  // handler function to read search bar changes
   const handleChange = (e) => {
     e.preventDefault();
     setSearchCity(e.target.value);
   };
 
+  // return matched city from search bar
   if (searchCity.length > 0) {
     cities.filter((city) => {
       return city.name.match(searchCity);
@@ -26,6 +29,7 @@ export default function Search() {
 
   return (
     <div>
+
       <input
         type='text'
         placeholder='Enter City'
@@ -34,9 +38,11 @@ export default function Search() {
       
       <table>
         <tr>
-
+          <th>City</th>
+          <th>Province</th>
         </tr>
       </table>
+
     </div>
   )
 }
