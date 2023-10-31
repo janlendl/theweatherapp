@@ -41,8 +41,17 @@ export default function Search() {
           <th>City</th>
           <th>Province</th>
         </tr>
-      </table>
 
+        {cities.map((city, i) => {
+          <div>
+            <tr>
+              <td>{city.name}</td>
+              <td>{city.province}</td>
+            </tr>
+          </div>
+        })}
+
+      </table>
     </div>
   )
-}
+};
