@@ -16,16 +16,17 @@ export default function Search() {
   
   // handler function to read search bar changes
   const handleChange = (e) => {
-    e.preventDefault();
+    //e.preventDefault();
+    console.log(':::e:::', e.target.value);
+    if (searchCity.length > 0) {
+      cities.filter((city) => {
+        return city.name.match(searchCity);
+      });
+    }
     setSearchCity(e.target.value);
   };
 
   // return matched city from search bar
-  if (searchCity.length > 0) {
-    cities.filter((city) => {
-      return city.name.match(searchCity);
-    });
-  }
 
   return (
     <div>
