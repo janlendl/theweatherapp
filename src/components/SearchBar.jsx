@@ -20,7 +20,7 @@ export default function SearchBar() {
     console.log(':::e:::', e.target.value);
     if (searchCity.length > 0) {
       cities.filter((city) => {
-        return city.name.match(searchCity);
+        return city.name.match({searchCity});
       });
     }
     setSearchCity(e.target.value);
@@ -35,8 +35,12 @@ export default function SearchBar() {
         type='text'
         placeholder='Enter City'
         onChange={handleChange}
-        value={searchCity}/>
-      
+        value={searchCity}
+      />
+      <div>
+        <h3>City is: {searchCity}</h3>
+      </div>
+
       <table>
         <tr>
           <th>City</th>
