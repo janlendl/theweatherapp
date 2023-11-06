@@ -1,6 +1,6 @@
 import React, { useState} from 'react'
 
-export default function Search() {
+export default function SearchBar() {
   
   // sample dataset
   const cities = [
