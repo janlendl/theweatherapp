@@ -2,32 +2,11 @@ import React, { useState} from 'react'
 
 export default function SearchBar() {
   
-  // sample dataset
-  const cities = [
-    {name: 'Calgary', province: 'Alberta'},
-    {name: 'Airdie', province: 'Alberta'},
-    {name: 'Toronto', province: 'Ontario'},
-    {name: 'Vancouver', province: 'British Columbia'},
-    {name: 'Whistler', province: 'British Columbia'},
-    {name: 'Moncton', province: 'New Brunswick'},
-  ];
-
   const [searchCity, setSearchCity] = useState('');
   
-  // handler function to read search bar changes
   const handleChange = (e) => {
-    //e.preventDefault();
-    console.log(':::e:::', e.target.value);
-    if (searchCity.length > 0) {
-      cities.filter((city) => {
-        return city.name.match({searchCity});
-      });
-    }
     setSearchCity(e.target.value);
-  };
-
-  // return matched city from search bar
-
+  }
   return (
     <div>
 
@@ -37,27 +16,9 @@ export default function SearchBar() {
         onChange={handleChange}
         value={searchCity}
       />
-      <div>
+      {/* <div>
         <h3>City is: {searchCity}</h3>
-      </div>
-
-      <table>
-        <tr>
-          <th>City</th>
-          <th>Province</th>
-        </tr>
-
-        {cities.map((city, i) => (
-          <div>
-            <tr>
-              <td>{city.i}</td>
-              <td>{city.name}</td>
-              <td>{city.province}</td>
-            </tr>
-          </div>
-        ))};
-
-      </table>
+      </div> */}
     </div>
   )
 }
