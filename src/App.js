@@ -1,18 +1,34 @@
-//import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
-import SearchBar from './components/SearchBar';
-import WeatherInfo from './components/WeatherInfo';
+// import WeatherInfo from './components/WeatherInfo';
 import './App.css';
 
-function App() {
+export default function App() {
+  
+  const [searchCity, setSearchCity] = useState('');
+  
+  const handleChange = (e) => {
+    setSearchCity(e.target.value);
+  }
+
   return (
     <>
     <Header/>
-    <SearchBar/> 
-    <WeatherInfo />   
+    <div>
+      <input
+        type='text'
+        placeholder='Enter City'
+        onChange={handleChange}
+        value={searchCity}
+      />
+      {/* <button></button>*/}
+      <div>
+        <h3>City is: {searchCity}</h3>
+      </div>
+    </div>
+
     </>
+
   )
 }
 
-export default App;
