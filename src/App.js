@@ -20,10 +20,7 @@ export default function App() {
           onChange={handleChange}
           value={searchCity}
         />
-        {/* <button></button>*/}
-        {/* <div>
-        <h3>City is: {searchCity}</h3>
-      </div> */}
+
       </div>
 
       <WeatherInfo city={searchCity}/>
