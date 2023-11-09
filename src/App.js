@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
 import WeatherInfo from "./components/WeatherInfo";
-import "./App.css";
+import "./App.scss";
 
 export default function App() {
   const [searchCity, setSearchCity] = useState("");
@@ -13,7 +13,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <div>
+      <div className="App-header">
         <input
           type="text"
           placeholder="Enter City"
