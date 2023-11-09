@@ -15,6 +15,7 @@ export default function App() {
       <Header />
       <div className="App-header">
         <input
+          className="searchBar"
           type="text"
           placeholder="Enter City"
           onChange={handleChange}
