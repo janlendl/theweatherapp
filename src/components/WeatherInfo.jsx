@@ -16,11 +16,12 @@ export default function WeatherInfo(props) {
     axios.request(weatherData)
       .then((res) => {
         console.log('Weather API call:: ',res.data);
+        setweatherResult(res.data);
       })
       .catch((err) => {
         console.log('Error: ', err);
       });
-  }, )
+  }, [weatherResult]);
     
 
   return (
