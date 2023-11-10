@@ -16,17 +16,18 @@ export default function WeatherInfo(props) {
     axios.request(weatherData)
       .then((res) => {
         console.log('Weather API call:: ',res.data);
-        setweatherResult(res.data);
+        //setweatherResult(res.data);
       })
       .catch((err) => {
         console.log('Error: ', err);
       });
-  }, [weatherResult]);
+  },);
     
 
   return (
     <div>
       <h2>City selected: {props.city}</h2>
+      <h3>Weather Today is</h3>
     </div>
   )
 }
