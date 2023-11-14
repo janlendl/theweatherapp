@@ -2,14 +2,14 @@ import React, {useEffect, useState} from 'react'
 import axios from 'axios';
 
 export default function WeatherInfo(props) {
-  const {city} = props;
+  //const {city} = props;
   console.log('::CITY:: ', city);
 
-  const [weatherResult, setweatherResult] = useState([]);
+  const [weatherResult, setWeatherResult] = useState([]);
 
   let weatherData = {
     method: 'GET',
-    url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=743366476b7670d23d2788f10c157d96`,
+    url: `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=743366476b7670d23d2788f10c157d96`,
   }
 
   useEffect(() => {
