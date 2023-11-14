@@ -8,14 +8,14 @@ export default function App() {
   const [passCity, setPassCity] = useState('');
 
   const handleChange = (e) => {
-    e.preventDefault();
+    //e.preventDefault();
     setSearchCity(e.target.value);
   };
 
   const grabCity = () => {
     setPassCity(searchCity);
   }
-
+  
   return (
     <>
       <Header />
@@ -30,8 +30,11 @@ export default function App() {
         <button type="submit" onClick={grabCity}>Search</button>
 
       </div>
+      {
+        passCity && <WeatherInfo city={passCity}/>
+      }
+      
 
-      <WeatherInfo city={passCity}/>
     </>
   );
 }
