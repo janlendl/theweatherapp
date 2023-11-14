@@ -4,11 +4,17 @@ import WeatherInfo from "./components/WeatherInfo";
 import "./App.scss";
 
 export default function App() {
-  const [searchCity, setSearchCity] = useState("");
+  const [searchCity, setSearchCity] = useState('');
+  const [passCity, setPassCity] = useState('');
 
   const handleChange = (e) => {
+    e.preventDefault();
     setSearchCity(e.target.value);
   };
+
+  const grabCity = () => {
+    setPassCity(searchCity);
+  }
 
   return (
     <>
@@ -21,10 +27,11 @@ export default function App() {
           onChange={handleChange}
           value={searchCity}
         />
+        <button type="submit" onClick={grabCity}>Search</button>
 
       </div>
 
-      <WeatherInfo city={searchCity}/>
+      <WeatherInfo city={passCity}/>
     </>
   );
 }

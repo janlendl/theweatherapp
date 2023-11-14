@@ -3,9 +3,9 @@ import axios from 'axios';
 
 export default function WeatherInfo(props) {
   //const {city} = props;
-  console.log('::CITY:: ', city);
+  console.log('::CITY:: ', props.city);
 
-  const [weatherResult, setWeatherResult] = useState([]);
+  const [weatherResult, setWeatherResult] = useState(['']);
 
   let weatherData = {
     method: 'GET',
@@ -15,13 +15,13 @@ export default function WeatherInfo(props) {
   useEffect(() => {
     axios.request(weatherData)
       .then((res) => {
+        setWeatherResult(res.data);
         console.log('Weather API call:: ',res.data);
-        //setweatherResult(res.data);
       })
       .catch((err) => {
         console.log('Error: ', err);
       });
-  },);
+  },[props.city]);
     
 
   return (
