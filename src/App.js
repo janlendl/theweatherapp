@@ -12,7 +12,8 @@ export default function App() {
     setSearchCity(e.target.value);
   };
 
-  const grabCity = () => {
+  const grabCity = (e) => {
+    e.preventDefault();
     setPassCity(searchCity);
   }
   
@@ -20,14 +21,16 @@ export default function App() {
     <>
       <Header />
       <div className="App-header">
-        <input
-          className="searchBar"
-          type="text"
-          placeholder="Enter City"
-          onChange={handleChange}
-          value={searchCity}
-        />
-        <button type="submit" onClick={grabCity}>Search</button>
+        <form onSubmit={grabCity}>
+          <input
+            className="searchBar"
+            type="text"
+            placeholder="Enter City"
+            onChange={handleChange}
+            value={searchCity}
+          />
+        <button type="submit">Search</button>
+        </form>
 
       </div>
       {
