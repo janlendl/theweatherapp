@@ -6,7 +6,7 @@ export default function WeatherInfo(props) {
   console.log('::CITY:: ', props.city);
 
   const [weatherData, setWeatherData] = useState({});
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=743366476b7670d23d2788f10c157d96&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=743366476b7670d23d2788f10c157d96`;
   
   useEffect(() => {
     if (props.city) {
