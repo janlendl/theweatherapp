@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios';
+import WeatherCard from './WeatherCard';
 
 export default function WeatherInfo(props) {
 
@@ -18,8 +19,20 @@ export default function WeatherInfo(props) {
       });
     }
   },[props.city, url]);
-    
-  //const celcius = ;
+
+  const weatherDetails = weatherData.map((weather) => {
+    return (
+      <WeatherCard>
+        key={weather.id}
+        description={weather.description}
+        feelsLike={weather.main.feels_like}
+        temp={weather.main.temp}
+        min={weather.main.temp_min}
+        max={weather.main.temp_max}
+
+      </WeatherCard>
+    )
+  }) 
   return (
     <div>
       <h2>{weatherData.name}</h2>
