@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios';
+import './WeatherInfo.scss';
 
 export default function WeatherInfo(props) {
 
@@ -23,7 +24,7 @@ export default function WeatherInfo(props) {
   console.log(':::HOOK::: ', weatherData); 
   return (
     <>
-      <div>
+      <div className='resultsCard'> 
         <h2>{weatherData.name}</h2>
         <div className='currentTemp'>
           <ul>
