@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios';
-import WeatherCard from './WeatherCard';
 
 export default function WeatherInfo(props) {
 
@@ -21,7 +20,7 @@ export default function WeatherInfo(props) {
     }
   },[props.city, url]);
 
-
+  console.log(':::HOOK::: ', weatherData); 
   return (
     <>
       <div>
