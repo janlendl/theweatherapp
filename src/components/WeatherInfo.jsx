@@ -12,7 +12,7 @@ export default function WeatherInfo(props) {
     if (props.city) {
       axios.get(url)
       .then((res) => {
-        setWeatherData(res.data);
+        JSON.stringify(setWeatherData(res.data));
         console.log('Weather API call:: ', res.data);
       })
       .catch((err) => {
@@ -21,21 +21,6 @@ export default function WeatherInfo(props) {
     }
   },[props.city, url]);
 
-  // pass weather details to Weather Card component
-  const weatherDetails = Object.keys(weatherData).map((data) => {
-    console.log('::::WEATHER:::: ', data.weather[0].description);
-    
-    return (
-      <WeatherCard
-        // key={weather.id}
-        // description={weather[0].description}
-        // feelsLike={weather.main.feels_like}
-        // temp={weather.main.temp}
-        // min={weather.main.temp_min}
-        // max={weather.main.temp_max}
-      />
-    );
-  });
 
   return (
     <>
@@ -44,7 +29,6 @@ export default function WeatherInfo(props) {
         <h3>Weather Today</h3>
         <span>
           <ul>
-            { weatherDetails }
           </ul>
         </span>
         
