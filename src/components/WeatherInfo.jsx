@@ -26,12 +26,18 @@ export default function WeatherInfo(props) {
     <>
       <div>
         <h2>{weatherData.name}</h2>
-        <h3>Weather Today</h3>
-        <span>
+        <div className='currentTemp'>
           <ul>
+            <li>{weatherData.main?.temp}</li>
+            <li>{weatherData.main?.feels_like}</li>
           </ul>
-        </span>
-        
+        <div className='minmaxWeather'>
+          <ul>
+            <li>{weatherData.main?.temp_min}</li>
+            <li>{weatherData.main?.temp_max}</li>
+          </ul>
+        </div>
+        </div>
       </div>
     </>
   )
