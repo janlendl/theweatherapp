@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios';
+
+import {convertToCelcius} from '../helpers/converter';
 import './WeatherInfo.scss';
 
 export default function WeatherInfo(props) {
@@ -28,13 +30,13 @@ export default function WeatherInfo(props) {
         <h2>{weatherData.name}</h2>
         <div className='currentTemp'>
           <ul>
-            <li>{weatherData.main?.temp}</li>
-            <li>{weatherData.main?.feels_like}</li>
+            <li>{convertToCelcius(weatherData.main?.temp)}°C</li>
+            <li>{convertToCelcius(weatherData.main?.feels_like)}°C</li>
           </ul>
         <div className='minmaxWeather'>
           <ul>
-            <li>{weatherData.main?.temp_min}</li>
-            <li>{weatherData.main?.temp_max}</li>
+            <li>{convertToCelcius(weatherData.main?.temp_min)}°C</li>
+            <li>{convertToCelcius(weatherData.main?.temp_max)}°C</li>
           </ul>
         </div>
         </div>
