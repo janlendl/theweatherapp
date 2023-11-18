@@ -12,7 +12,7 @@ export default function WeatherInfo(props) {
     if (props.city) {
       axios.get(url)
       .then((res) => {
-        JSON.stringify(setWeatherData(res.data));
+        JSON.stringify(setWeatherData({name: res.data.name, weather: res.data.weather[0], main: res.data.main}));
         console.log('Weather API call:: ', res.data);
       })
       .catch((err) => {
