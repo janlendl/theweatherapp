@@ -28,17 +28,19 @@ export default function WeatherInfo(props) {
     <>
       <div className='resultsCard'> 
         <h2>{weatherData.name}</h2>
-        <div className='currentTemp'>
-          <ul>
-            <li>{convertToCelcius(weatherData.main?.temp)}°C</li>
-            <li>{convertToCelcius(weatherData.main?.feels_like)}°C</li>
-          </ul>
-        <div className='minmaxWeather'>
-          <ul>
-            <li>{convertToCelcius(weatherData.main?.temp_min)}°C</li>
-            <li>{convertToCelcius(weatherData.main?.temp_max)}°C</li>
-          </ul>
-        </div>
+        <div className='tempDetails'>
+          <div className='currentTemp'>
+            <ul>
+              <li>{convertToCelcius(weatherData.main?.temp)}°C</li>
+              <li>{convertToCelcius(weatherData.main?.feels_like)}°C</li>
+           </ul>
+          </div>
+          <div className='minmaxWeather'>
+            <ul>
+              <li>{convertToCelcius(weatherData.main?.temp_min)}°C</li>
+              <li>{convertToCelcius(weatherData.main?.temp_max)}°C</li>
+            </ul>
+          </div>
         </div>
       </div>
     </>
