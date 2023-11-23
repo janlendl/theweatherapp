@@ -13,3 +13,9 @@
 .tempDetails {
   list-style-type: none;
 }
+
+ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
