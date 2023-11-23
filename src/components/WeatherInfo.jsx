@@ -31,14 +31,14 @@ export default function WeatherInfo(props) {
         <div className='tempDetails'>
           <div className='currentTemp'>
             <ul>
-              <li>{convertToCelcius(weatherData.main?.temp)}°C</li>
-              <li>{convertToCelcius(weatherData.main?.feels_like)}°C</li>
+              <li>Temp: {convertToCelcius(weatherData.main?.temp)}°C</li>
+              <li>Feels Like: {convertToCelcius(weatherData.main?.feels_like)}°C</li>
            </ul>
           </div>
           <div className='minmaxWeather'>
             <ul>
-              <li>{convertToCelcius(weatherData.main?.temp_min)}°C</li>
-              <li>{convertToCelcius(weatherData.main?.temp_max)}°C</li>
+              <li>Low: {convertToCelcius(weatherData.main?.temp_min)}°C</li>
+              <li>High: {convertToCelcius(weatherData.main?.temp_max)}°C</li>
             </ul>
           </div>
         </div>
