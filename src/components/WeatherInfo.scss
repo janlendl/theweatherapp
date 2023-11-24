@@ -1,13 +1,15 @@
 .resultsCard {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-content: center;
   justify-content: center;
-  padding: 50px;
-  border: 2px solid white;
+  padding: 3.125rem;
+  border: 0.125rem solid white;
   background-color: white;
   border-radius: 3rem;
   color: grey;
+  width: 30rem;
+  height: 30rem;
 }
 
 li {
