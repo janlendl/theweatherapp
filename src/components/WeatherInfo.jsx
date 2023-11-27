@@ -26,8 +26,14 @@ export default function WeatherInfo(props) {
   console.log(':::HOOK::: ', weatherData); 
   return (
     <>
-      <div className='resultsCard'> 
-        <h2>{weatherData.name}</h2>
+      <div className='resultsCard'>
+        <div className='topCard'>
+          <h2>{weatherData.name}</h2>
+          <div className='weatherDescription'>
+            <span>{weatherData.weather?.description}</span>
+          </div>
+        </div> 
+        
         <div className='tempDetails'>
           <div className='currentTemp'>
             <ul>
