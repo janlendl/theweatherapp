@@ -29,6 +29,16 @@
   align-items: stretch;
 }
 
+.weatherIcon {
+width: 100px;
+height: 100px;
+}
+
+.weatherIcon img {
+  width: 100%;
+  height: auto;
+}
+
 li {
   list-style-type: none;
 }
