@@ -29,11 +29,14 @@ export default function WeatherInfo(props) {
       <div className='resultsCard'>
         <div className='topCard'>
           <h2>{weatherData.name}</h2>
+          <div className='weatherIcon'>
+            <img src={`https://openweathermap.org/img/wn/${weatherData.weather?.icon}.png`} alt='icon' />
+          </div>
           <div className='weatherDescription'>
             <span>{weatherData.weather?.description}</span>
           </div>
         </div> 
-        
+
         <div className='tempDetails'>
           <div className='currentTemp'>
             <ul>
