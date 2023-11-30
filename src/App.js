@@ -8,7 +8,6 @@ export default function App() {
   const [passCity, setPassCity] = useState('');
 
   const handleChange = (e) => {
-    //e.preventDefault();
     setSearchCity(e.target.value);
   };
 
