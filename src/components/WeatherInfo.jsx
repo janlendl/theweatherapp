@@ -4,6 +4,11 @@ import axios from 'axios';
 import {convertToCelcius} from '../helpers/converter';
 import './WeatherInfo.scss';
 
+
+export const icons = {
+  "01d": "public/icons/clear.svg",
+  "01n": "public/icons/clear_night.svg",
+}
 export default function WeatherInfo(props) {
 
   const [weatherData, setWeatherData] = useState({});
