@@ -4,10 +4,9 @@ import axios from 'axios';
 import {convertToCelcius} from '../helpers/converter';
 import './WeatherInfo.scss';
 
-
 export const icons = {
   "01d": "public/icons/clear.svg",
-  "01n": "public/icons/clear_night.svg",
+  "01n": "../../public/icons/clear_night.svg",
   "02d": "public/icons/few_clouds.svg",
   "02n": "public/icons/few_clouds_night.svg",
   "03d": "public/icons/scattered_clouds.svg",
@@ -25,6 +24,7 @@ export const icons = {
   "50d": "public/icons/mist.svg",
   "50n": "public/icons/mist_night.svg"
 }
+
 export default function WeatherInfo(props) {
 
   const [weatherData, setWeatherData] = useState({});
@@ -51,7 +51,8 @@ export default function WeatherInfo(props) {
         <div className='topCard'>
           <h2>{weatherData.name}</h2>
           <div className='weatherIcon'>
-            <img src={`https://openweathermap.org/img/wn/${weatherData.weather?.icon}.png`} alt='icon' />
+            {/* <img src={`https://openweathermap.org/img/wn/${weatherData.weather?.icon}.png`} alt='icon' /> */}
+            <img src={icons[weatherData.weather?.icon]} alt='icon' />
           </div>
           <div className='weatherDescription'>
             <span>{weatherData.weather?.description}</span>
