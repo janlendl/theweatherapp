@@ -4,9 +4,9 @@ import axios from 'axios';
 import {convertToCelcius} from '../helpers/converter';
 import './WeatherInfo.scss';
 
-export const icons = {
+const icons = {
   "01d": "public/icons/clear.svg",
-  "01n": "../../public/icons/clear_night.svg",
+  "01n": "public/icons/clear_night.svg",
   "02d": "public/icons/few_clouds.svg",
   "02n": "public/icons/few_clouds_night.svg",
   "03d": "public/icons/scattered_clouds.svg",
