@@ -20,10 +20,10 @@ import ThunderstormN from 'public/icons/thunderstorn_night.svg';
 import Thunderstorm from 'public/icons/thunderstorn_night.svg';
 
 const icons = {
-  BrokenCloudsN: BrokenCloudsN,
-  BrokenClouds: BrokenClouds,
-  ClearN: ClearN,
-  Clear: Clear,
+  "04n": BrokenCloudsN,
+  "04d": BrokenClouds,
+  "01n": ClearN,
+  "01d": Clear,
   FewCloudsN: FewCloudsN,
   FewClouds: FewClouds,
   MistN: MistN,
