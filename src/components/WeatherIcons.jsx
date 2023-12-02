@@ -19,9 +19,30 @@ import Snow from 'public/icons/snow.svg';
 import ThunderstormN from 'public/icons/thunderstorn_night.svg';
 import Thunderstorm from 'public/icons/thunderstorn_night.svg';
 
+const icons = {
+  BrokenCloudsN: BrokenCloudsN,
+  BrokenClouds: BrokenClouds,
+  ClearN: ClearN,
+  Clear: Clear,
+  FewCloudsN: FewCloudsN,
+  FewClouds: FewClouds,
+  MistN: MistN,
+  Mist: Mist,
+  RainN: RainN,
+  Rain: Rain,
+  ScatteredCloudsN: ScatteredCloudsN,
+  ScatteredClouds: ScatteredClouds,
+  ShowerRainN: ShowerRainN,
+  ShowerRain: ShowerRain,
+  SnowN: SnowN,
+  Snow: Snow,
+  ThunderstormN: ThunderstormN,
+  Thunderstorm: Thunderstorm
+}
 
-export default function WeatherIcons() {
+export default function WeatherIcons(props) {
+  const WeatherIcon = icons[props.icon];
   return (
-    <div>WeatherIcons</div>
+    <WeatherIcon width={30} height={30} />
   )
 }
