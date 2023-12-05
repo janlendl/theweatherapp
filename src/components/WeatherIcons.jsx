@@ -26,18 +26,18 @@ const icons = [{
   "01d": Clear,
   "02n": FewCloudsN,
   "02d": FewClouds,
-  MistN: MistN,
-  Mist: Mist,
-  RainN: RainN,
-  Rain: Rain,
-  ScatteredCloudsN: ScatteredCloudsN,
-  ScatteredClouds: ScatteredClouds,
-  ShowerRainN: ShowerRainN,
-  ShowerRain: ShowerRain,
-  SnowN: SnowN,
-  Snow: Snow,
-  ThunderstormN: ThunderstormN,
-  Thunderstorm: Thunderstorm
+  // MistN: MistN,
+  // Mist: Mist,
+  // RainN: RainN,
+  // Rain: Rain,
+  // ScatteredCloudsN: ScatteredCloudsN,
+  // ScatteredClouds: ScatteredClouds,
+  // ShowerRainN: ShowerRainN,
+  // ShowerRain: ShowerRain,
+  // SnowN: SnowN,
+  // Snow: Snow,
+  // ThunderstormN: ThunderstormN,
+  // Thunderstorm: Thunderstorm
 }];
 
 export default function WeatherIcons(props) {
@@ -46,6 +46,7 @@ export default function WeatherIcons(props) {
   
   icons.forEach(item => {
     weatherIcon = item[props.children]
+    console.log(':::', weatherIcon);
   });
   //const WeatherIcon = icons[props.icon];
   return (
