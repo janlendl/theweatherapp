@@ -3,7 +3,7 @@ import React from 'react'
 import BrokenCloudsN from '../assets/broken_clouds_night.svg';
 import BrokenClouds from '../assets/broken_clouds.svg';
 import ClearN from '../assets/clear_night.svg';
-import Clear from '../assets/icons/clear.svg';
+import Clear from '../assets/clear.svg';
 import FewCloudsN from '../assets/few_clouds_night.svg';
 import FewClouds from '../assets/few_clouds.svg';
 import MistN from '../assets/mist_night.svg';
@@ -19,7 +19,7 @@ import Snow from '../assets/snow.svg';
 import ThunderstormN from '../assets/thunderstorn_night.svg';
 import Thunderstorm from '../assets/thunderstorn_night.svg';
 
-const icons = {
+const icons = [{
   "04n": BrokenCloudsN,
   "04d": BrokenClouds,
   "01n": ClearN,
@@ -38,11 +38,20 @@ const icons = {
   Snow: Snow,
   ThunderstormN: ThunderstormN,
   Thunderstorm: Thunderstorm
-}
+}];
 
 export default function WeatherIcons(props) {
-  const WeatherIcon = icons[props.icon];
+  
+  let weatherIcon = "";
+  
+  icons.forEach(item => {
+    weatherIcon = item[props.children]
+  });
+  //const WeatherIcon = icons[props.icon];
   return (
-    <WeatherIcon width={30} height={30} />
+    <>
+    <img src={weatherIcon} alt='icon' />
+    </>
+    //<WeatherIcon width={30} height={30} />
   )
 }
