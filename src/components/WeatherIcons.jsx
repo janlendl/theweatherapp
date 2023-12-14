@@ -31,13 +31,13 @@ const icons = [{
   "10n": RainN,
   "10d": Rain,
   "03n": ScatteredCloudsN,
-  // "03d": ScatteredClouds,
-  // "09n": ShowerRainN,
-  // "09d": ShowerRain,
-  // "13n": SnowN,
-  // "13d": Snow,
-  // "11n": ThunderstormN,
-  // "11d": Thunderstorm
+  "03d": ScatteredClouds,
+  "09n": ShowerRainN,
+  "09d": ShowerRain,
+  "13n": SnowN,
+  "13d": Snow,
+  "11n": ThunderstormN,
+  "11d": Thunderstorm
 }];
 
 export default function WeatherIcons(props) {
