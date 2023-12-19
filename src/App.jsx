@@ -14,6 +14,7 @@ export default function App() {
   const grabCity = (e) => {
     e.preventDefault();
     setPassCity(searchCity);
+    setSearchCity('');
   }
   
   return (
@@ -28,7 +29,7 @@ export default function App() {
             onChange={handleChange}
             value={searchCity}
           />
-        <button type="submit">Search</button>
+        {/* <button type="submit">Search</button> */}
         </form>
 
       </div>
