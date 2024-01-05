@@ -22,6 +22,13 @@ export default function App() {
       <Header />
       <div className="App-header">
         <form onSubmit={grabCity}>
+          {/* <input
+            className="searchBar"
+            type="text"
+            placeholder="Enter City"
+            onChange={handleChange}
+            value={searchCity}
+          /> */}
           <input
             className="searchBar"
             type="text"
@@ -29,6 +36,14 @@ export default function App() {
             onChange={handleChange}
             value={searchCity}
           />
+          <div className="symbol">
+            <svg className="cloud">
+              <use href="#cloud" />
+            </svg>
+            <svg className="lens">
+              <use href="#lens" />
+            </svg>
+          </div>
         {/* <button type="submit">Search</button> */}
         </form>
 
