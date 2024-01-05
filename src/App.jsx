@@ -3,6 +3,10 @@ import Header from "./components/Header";
 import WeatherInfo from "./components/WeatherInfo";
 import "./App.scss";
 
+import Lens from "./assets/lens.svg";
+import Cloud from "./assets/search_cloud.svg";
+
+
 export default function App() {
   const [searchCity, setSearchCity] = useState('');
   const [passCity, setPassCity] = useState('');
@@ -38,10 +42,10 @@ export default function App() {
           />
           <div className="symbol">
             <svg className="cloud">
-              <use href="#cloud" />
+              <use xlinkHref={Cloud} />
             </svg>
             <svg className="lens">
-              <use href="#lens" />
+              <use xlinkHref={Lens} />
             </svg>
           </div>
         {/* <button type="submit">Search</button> */}
